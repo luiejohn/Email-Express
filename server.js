@@ -3,9 +3,9 @@ const express = require('express');
 const app = express();
 
 
-app.get('/', (req, res) => {
-    res.send({'hi': 'asdasds'})
-});
+// app.get('/', (req, res) => {
+//     res.send({'hi': 'asdasds'})
+// });
 
 
 if ( process.env.NODE_ENV === 'production' ) {
