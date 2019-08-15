@@ -16,6 +16,11 @@ router.get(
 //goes back to GoogleStrategy and execute callback function
 router.get('/auth/google/callback', passport.authenticate('google'));
 
+router.get('/api/logout', (req, res) => {
+    //logout is from passport automatically attached to req
+    req.logout();
+    res.send(req.user);
+})
 
 module.exports = router;
 
